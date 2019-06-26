@@ -4,7 +4,15 @@ module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
+      res.render("home", {
+        msg: "Welcome!",
+        examples: dbExamples
+      });
+    });
+  });
+  app.get("/login", function(req, res) {
+    db.Example.findAll({}).then(function(dbExamples) {
+      res.render("login", {
         msg: "Welcome!",
         examples: dbExamples
       });
