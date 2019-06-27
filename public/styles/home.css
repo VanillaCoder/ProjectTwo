@@ -1,14 +1,23 @@
-body{
-    background: url(https://d3.xlrs.eu/wp-content/uploads/2018/01/black-gradient-background-1024x685.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+body {
+  background: url(https://d3.xlrs.eu/wp-content/uploads/2018/01/black-gradient-background-1024x685.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
 }
-.jumbotron{
-    height: 900px;
-    width: 100%;
-    background: none;
-    color: white;
+
+#jumbotron {
+  background: none;
+  color: #D7EBE1;
 }
-#forums{
-    background: rgba(255, 255, 255, 0.418);
+
+.container-card {
+  display: flex;
+  justify-content: space-around;
 }
+.container-card .main-card {
+  background: #D7EBE1;
+  margin: 5px;
+  width: 430px;
+}
+
+/*# sourceMappingURL=home.css.map */

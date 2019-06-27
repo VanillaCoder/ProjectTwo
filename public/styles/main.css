@@ -1,3 +1,18 @@
+#navmain {
+  background: #2E5D58;
+}
+#navmain a {
+  color: #6BFFB8;
+}
 
+#footer {
+  background: #2E5D58;
+  color: #D7EBE1;
+  padding: 10px;
+}
+
+ul li i {
+  color: #6BFFB8;
+}
 
 /*# sourceMappingURL=main.css.map */
