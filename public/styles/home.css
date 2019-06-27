@@ -1,11 +1,14 @@
 body{
-    background: black;
-
+    background: url(https://d3.xlrs.eu/wp-content/uploads/2018/01/black-gradient-background-1024x685.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
 .jumbotron{
-    height: 1000px;
+    height: 900px;
     width: 100%;
-    background: black;
+    background: none;
     color: white;
+}
+#forums{
+    background: rgba(255, 255, 255, 0.418);
 }
