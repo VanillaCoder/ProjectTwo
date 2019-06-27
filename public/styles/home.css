@@ -1,23 +1,19 @@
-body {
-  background: url(https://d3.xlrs.eu/wp-content/uploads/2018/01/black-gradient-background-1024x685.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-sizing: border-box;
-}
-
 #jumbotron {
   background: none;
   color: #D7EBE1;
 }
 
 .container-card {
-  display: flex;
-  justify-content: space-around;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .container-card .main-card {
   background: #D7EBE1;
   margin: 5px;
-  width: 430px;
+}
+.container-card .main-card img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=home.css.map */

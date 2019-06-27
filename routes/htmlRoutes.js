@@ -18,9 +18,9 @@ module.exports = function(app) {
       });
     });
   });
-  app.get("/singup", function(req, res) {
+  app.get("/signup", function(req, res) {
     db.Category.findAll({}).then(function(dbExamples) {
-      res.render("singup", {
+      res.render("signup", {
         msg: "Welcome!",
         examples: dbExamples
       });

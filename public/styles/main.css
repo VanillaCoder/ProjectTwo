@@ -1,3 +1,9 @@
+body {
+  background: url(https://d3.xlrs.eu/wp-content/uploads/2018/01/black-gradient-background-1024x685.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #navmain {
   background: #2E5D58;
 }
