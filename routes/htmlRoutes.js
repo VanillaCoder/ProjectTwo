@@ -5,8 +5,32 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     db.Category.findAll({}).then(function(dbExamples) {
       res.render("home", {
-        msg: "Welcome!",
-        examples: dbExamples
+        array:[
+          {
+            url: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80",
+            title: "music",
+            text: "the best music",
+            date: "may",
+          },
+          {
+            url: "https://images.unsplash.com/photo-1492044715545-15ddedd84e5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80",
+            title: "general",
+            text: "the best music",
+            date: "may",
+          },
+          {
+            url: "https://images.unsplash.com/photo-1492044715545-15ddedd84e5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80",
+            title: "tech",
+            text: "the best music",
+            date: "may",
+          },
+          {
+            url: "https://images.unsplash.com/photo-1492044715545-15ddedd84e5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80",
+            title: "music",
+            text: "the best music",
+            date: "may",
+          }
+        ]
       });
     });
   });
