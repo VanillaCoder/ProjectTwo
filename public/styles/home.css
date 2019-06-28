@@ -1,11 +1,19 @@
-body{
-    background: black;
-
+#jumbotron {
+  background: none;
+  color: #D7EBE1;
 }
 
-.jumbotron{
-    height: 1000px;
-    width: 100%;
-    background: black;
-    color: white;
+.container-card {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+.container-card .main-card {
+  background: #D7EBE1;
+  margin: 5px;
+}
+.container-card .main-card img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=home.css.map */

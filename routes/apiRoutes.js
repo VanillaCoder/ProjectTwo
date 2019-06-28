@@ -7,17 +7,20 @@ module.exports = function (app) {
      res.json(categorydb);
    });
   });
-  app.get("/api/create", function(req, res) {
-    db.Category.create({
-      catID: "coding"
-    });
-    db.Category.create({
-      catID: "politics"
-    });
-    db.Category.create({
-      catID: "general"
-    });
-  });
+  
+  //not using atm
+  // app.get("/api/create", function(req, res) {
+  //   db.Category.create({
+  //     catID: "coding"
+  //   });
+  //   db.Category.create({
+  //     catID: "politics"
+  //   });
+  //   db.Category.create({
+  //     catID: "general"
+  //   });
+  // });
+
   // Create a new example
   app.post("/api/examples", function (req, res) {
     db.Example.create(req.body).then(function (dbExample) {
