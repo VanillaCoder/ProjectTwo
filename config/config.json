@@ -2,8 +2,8 @@
   "development": {
     "username": "root",
 
-    "password": "Liambennett1!@#",
-    "database": "cldb",
+    "password": "",
+    "database": "",
 
     "host": "localhost",
     "dialect": "mysql"
