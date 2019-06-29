@@ -1,5 +1,35 @@
-<div class="container" id="container">
-    <h1>post web</h1>
+<div class="container">
+    {{!-- ---------------- Post Author Card --}}
+    {{#each post}}
+    <div id="card" class="card ">
+        <div id="card-header" class="card-header">
+            {{title}}
+        </div>
+        <div id="card-body" class="card-body">
+            <p class="card-text">{{body}}
+            </p>
+            <h5 class="date">{{createdAt}}</h5>
+        </div>
+    </div>
+    {{/each}}
+
+    {{!-- ---------------- Post Reply Card --}}
+    {{#each post}}
+    {{#each Replies}}
+    <div id="card" class="card ">
+        <div id="card-header" class="card-header">
+            {{userID}}
+        </div>
+        <div id="card-body" class="card-body">
+            <p class="card-text">{{body}}
+            </p>
+            <h5 class="date">{{createdAt}}</h5>
+        </div>
+
+    </div>
+    {{/each}}
+    {{/each}}
+
 </div>
 
-<link rel="stylesheet" href="/styles//post.css">
+<link rel="stylesheet" href="/styles/category.css">
