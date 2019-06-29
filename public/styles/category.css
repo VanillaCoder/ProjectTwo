@@ -1,0 +1,39 @@
+.container {
+  min-height: 800px;
+}
+.container #form {
+  padding: 20px;
+  margin: auto;
+  max-width: 40%;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #1D9568;
+}
+.container #form .form-box input {
+  border-radius: 30px;
+  height: 50px;
+  text-align: center;
+}
+.container #form #btn-newpost {
+  background: #1D9568;
+  color: #D7EBE1;
+}
+.container #card {
+  background: #D7EBE1;
+  color: #2E5D58;
+  margin: 15px;
+  border-radius: 10px;
+}
+.container #card #card-header {
+  background: #1D9568;
+  padding: 10px;
+  text-align: center;
+  color: #D7EBE1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.container #card #card-body {
+  padding: 15px;
+}
+
+/*# sourceMappingURL=category.css.map */
