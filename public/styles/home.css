@@ -3,16 +3,19 @@
   color: #D7EBE1;
 }
 
-.container-card {
+#container {
+  margin-right: 60px;
+}
+#container .container-card {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.container-card .main-card {
+#container .container-card .main-card {
   background: #D7EBE1;
   margin: 5px;
 }
-.container-card .main-card img {
+#container .container-card .main-card img {
   width: 100%;
 }
 

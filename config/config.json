@@ -3,7 +3,7 @@
     "username": "root",
 
     "password": "Eb.16587981",
-    "database": "exampledb",
+    "database": "cldb",
 
     "host": "localhost",
     "dialect": "mysql"

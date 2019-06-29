@@ -1,0 +1,36 @@
+<div class="container">
+
+    <form id="form">
+        <div class="form-group form-box">
+            <label for="Subject"></label>
+            <input type="text" class="form-control" id="text" aria-describedby="textHelp" placeholder="Subject">
+        </div>
+        <div class="form-group form-box">
+            <label for="comment"></label>
+            <input type="text" class="form-control" id="comment" placeholder="Comment">
+        </div>
+
+        <button id="btn-newpost" type="submit" class="btn">New Post</button>
+    </form>
+    {{!-- ----------------First card --}}
+    <div id="card" class="card ">
+        <div id="card-header" class="card-header">
+            Featured
+        </div>
+        <div id="card-body" class="card-body">
+            <p class="card-text">With supporting text below as a natural lead-in to additional Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Aut consectetur quo error animi quod, tenetur illum fugit pariatur
+                sint adipisci. Facilis suscipit ratione dolorem at, quasi facere? Sed, laborum explicabo. Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Quis veritatis velit nihil neque quos iusto. Doloremque ea
+                dignissimos aut alias odit labore voluptate laudantium! Repellendus ea nam distinctio iure at. content.
+            </p>
+            <h5 class="date">2 days ago</h5>
+        </div>
+        <div class="card-footer text-muted">
+            <a href="/category/:title/:id" class="btn ">Comment</a>
+        </div>
+    </div>
+    
+</div>
+
+<link rel="stylesheet" href="/styles/category.css">
