@@ -20,8 +20,17 @@ module.exports = function (app) {
     });
   });
 
+  app.post("api/post/create", function (req, res) {
+    db.Post.create({
+      category: req.body.category,
+      title: req.body.title,
+      body: req.body.body
+    })
+      .then(console.log("post created"));
+  });
+
   //not using atm
-  app.get("/api/create", function(req, res) {
+  app.get("/api/create", function (req, res) {
     db.Post.create({
       category: "coding",
       title: "Need help with this code",

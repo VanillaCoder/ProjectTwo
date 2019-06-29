@@ -3,19 +3,20 @@
     <form id="form">
         <div class="form-group form-box">
             <label for="Subject"></label>
-            <input type="text" class="form-control" id="text" aria-describedby="textHelp" placeholder="Subject">
+            <input type="text" class="form-control" id="post-title" aria-describedby="textHelp"
+                placeholder="Post Title">
         </div>
         <div class="form-group form-box">
             <label for="comment"></label>
-            <input type="text" class="form-control" id="comment" placeholder="Comment">
+            <input type="text" class="form-control" id="post-body" placeholder="Body">
         </div>
 
-        <button id="btn-newpost" type="submit" class="btn">New Post</button>
+        <button id="btn-newpost" type="" class="btn">New Post</button>
     </form>
     {{!-- ----------------First card --}}
     {{#each category}}
     <div id="card" class="card ">
-        <div id="card-header" class="card-header">
+        <div id="card-header" data-id="{{category}}" class="card-header">
             {{title}}
         </div>
         <div id="card-body" class="card-body">
@@ -30,5 +31,29 @@
     {{/each}}
 
 </div>
+<script>
+
+    $("#btn-newpost").on("click", function (event) {
+        event.preventDefault();
+
+        var input = {
+            category: $("#card-header").data("id"),
+            title: $("#post-title").val().trim(),
+            body: $("#post-body").val().trim()
+        }
+
+        console.log(input)
+
+        $.ajax("/api/post/create", {
+            method: "POST",
+            data: input
+
+        }).then(function () {
+            console.log("Created new post.")
+            location.reload();
+
+        })
+    })
+</script>
 
 <link rel="stylesheet" href="/styles/category.css">
