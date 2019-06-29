@@ -1,30 +1,50 @@
 var db = require("../models");
+db.Post.hasMany(db.Reply);
+
 
 module.exports = function (app) {
   // Get all examples
   app.get("/api/categories", function (req, res) {
-   db.Category.findAll({}).then(function(categorydb) {
-     res.json(categorydb);
-   });
+    db.Category.findAll({}).then(function (categorydb) {
+      res.json(categorydb);
+    });
   });
-  
+  app.get("/api/posts", function (req, res) {
+    db.Post.findAll({}).then(function (postsdb) {
+      res.json(postsdb);
+    });
+  });
+  app.get("/api/replys", function (req, res) {
+    db.Post.findAll({}).then(function (replydb) {
+      res.json(replydb);
+    });
+  });
+
   //not using atm
-  // app.get("/api/create", function(req, res) {
-  //   db.Category.create({
-  //     catID: "coding"
-  //   });
-  //   db.Category.create({
-  //     catID: "politics"
-  //   });
-  //   db.Category.create({
-  //     catID: "general"
-  //   });
-  // });
+  app.get("/api/create", function(req, res) {
+    db.Post.create({
+      category: "coding",
+      title: "Need help with this code",
+      body: "lately i've been running into a lot of trpouble with EVERYTHING."
+    });
+    db.Post.create({
+      category: "politics",
+      title: "orange man bad",
+      body: "iran is a great place full of wonderful people how dare you"
+    });
+    db.Reply.create({
+      userID: "Jack",
+      body: "Your ideas suck",
+      PostId: 1
+    });
+
+  });
 
   // Create a new example
-  app.post("/api/examples", function (req, res) {
-    db.Example.create(req.body).then(function (dbExample) {
-      res.json(dbExample);
+  app.post("/api/examples/:post", function (req, res) {
+    db.Reply.create({
+      text: req.body.id,
+      postid: req.params.post
     });
   });
 

@@ -2,24 +2,21 @@ var db = require("../models");
 
 module.exports = function (app) {
   // Load index page
-  app.get("/", function(req, res) {
-    db.Category.findAll({}).then(function(dbExamples) {
-      res.render("home", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
+  app.get("/", function (req, res) {
+    db.Category.findAll({}).then(function (categorydb) {
+      res.render("home", { category: categorydb });
     });
   });
-  app.get("/login", function(req, res) {
-    db.Category.findAll({}).then(function(dbExamples) {
+  app.get("/login", function (req, res) {
+    db.Category.findAll({}).then(function (dbExamples) {
       res.render("login", {
         msg: "Welcome!",
         examples: dbExamples
       });
     });
   });
-  app.get("/signup", function(req, res) {
-    db.Category.findAll({}).then(function(dbExamples) {
+  app.get("/signup", function (req, res) {
+    db.Category.findAll({}).then(function (dbExamples) {
       res.render("signup", {
         msg: "Welcome!",
         examples: dbExamples
@@ -28,8 +25,8 @@ module.exports = function (app) {
   });
 
   // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Category.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+  app.get("/example/:id", function (req, res) {
+    db.Category.findOne({ where: { id: req.params.id } }).then(function (dbExample) {
       res.render("example", {
         example: dbExample
       });
