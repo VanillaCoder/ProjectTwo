@@ -13,24 +13,22 @@
         <button id="btn-newpost" type="submit" class="btn">New Post</button>
     </form>
     {{!-- ----------------First card --}}
+    {{#each category}}
     <div id="card" class="card ">
         <div id="card-header" class="card-header">
-            Featured
+            {{title}}
         </div>
         <div id="card-body" class="card-body">
-            <p class="card-text">With supporting text below as a natural lead-in to additional Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Aut consectetur quo error animi quod, tenetur illum fugit pariatur
-                sint adipisci. Facilis suscipit ratione dolorem at, quasi facere? Sed, laborum explicabo. Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Quis veritatis velit nihil neque quos iusto. Doloremque ea
-                dignissimos aut alias odit labore voluptate laudantium! Repellendus ea nam distinctio iure at. content.
+            <p class="card-text">{{body}}
             </p>
-            <h5 class="date">2 days ago</h5>
+            <h5 class="date">{{createdAt}}</h5>
         </div>
         <div class="card-footer text-muted">
-            <a href="/category/:title/:id" class="btn ">Comment</a>
+            <a href="/category/post/{{id}}" class="btn ">Comment</a>
         </div>
     </div>
-    
+    {{/each}}
+
 </div>
 
 <link rel="stylesheet" href="/styles/category.css">

@@ -28,9 +28,14 @@ module.exports = function (app) {
       body: "lately i've been running into a lot of trpouble with EVERYTHING."
     });
     db.Post.create({
-      category: "politics",
-      title: "orange man bad",
-      body: "iran is a great place full of wonderful people how dare you"
+      category: "videogames",
+      title: "new game coming out",
+      body: "man this new game coming out is going to be so cool, i cant wait!"
+    });
+    db.Post.create({
+      category: "videogames",
+      title: "games are for nerds",
+      body: "all games are for nerds change my mind"
     });
     db.Reply.create({
       userID: "Jack",
