@@ -20,7 +20,7 @@ module.exports = function (app) {
     });
   });
 
-  app.post("api/post/create", function (req, res) {
+  app.post("/api/post/create", function (req, res) {
     db.Post.create({
       category: req.body.category,
       title: req.body.title,
