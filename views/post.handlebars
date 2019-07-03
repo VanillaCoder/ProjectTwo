@@ -2,7 +2,7 @@
     {{!-- ---------------- Post Author Card --}}
     {{#each post}}
     <div id="card" class="card ">
-        <div id="card-header" class="card-header">
+        <div id="card-header" class="card-header" data-id="{{id}}" >
             {{title}}
         </div>
         <div id="card-body" class="card-body">
@@ -13,13 +13,10 @@
     </div>
     {{/each}}
 
-    {{!-- ---------------- Post Reply Card --}}
+    {{!------------------ Post Reply Card --}}
     {{#each post}}
     {{#each Replies}}
     <div id="card" class="card ">
-        <div id="card-header" class="card-header">
-            {{userID}}
-        </div>
         <div id="card-body" class="card-body">
             <p class="card-text">{{body}}
             </p>
@@ -30,6 +27,37 @@
     {{/each}}
     {{/each}}
 
+    <form id="form">
+    
+        <div class="form-group form-box">
+            <label for="comment"></label>
+            <input type="text" class="form-control" id="post-body" placeholder="Body">
+        </div>
+
+        <button id="btn-newpost" type="" class="btn">New Post</button>
+    </form>
+
 </div>
+
+<script>
+
+    $("#btn-newpost").on("click", function (event) {
+        event.preventDefault();
+
+        var input = {
+            PostId: $("#card-header").data("id"),
+            body: $("#post-body").val().trim()
+        }
+
+        console.log(input)
+
+        $.ajax("/api/reply/create", {
+            method: "POST",
+            data: input
+        }).then(
+            location.reload()
+        )
+    })
+</script>
 
 <link rel="stylesheet" href="/styles/category.css">

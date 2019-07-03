@@ -47,12 +47,9 @@
         $.ajax("/api/post/create", {
             method: "POST",
             data: input
-
-        }).then(function () {
-            console.log("Created new post.")
-            location.reload();
-
-        })
+        }).then(
+            location.reload()
+        )
     })
 </script>
 
