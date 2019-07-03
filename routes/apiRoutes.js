@@ -29,6 +29,14 @@ module.exports = function (app) {
       .then(console.log("post created"));
   });
 
+  app.post("/api/reply/create", function (req, res) {
+    db.Reply.create({
+      PostId: req.body.PostId,
+      body: req.body.body
+    })
+      .then(console.log("post created"));
+  });
+
   //not using atm
   app.get("/api/create", function (req, res) {
     db.Post.create({
