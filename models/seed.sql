@@ -27,3 +27,5 @@ VALUES
 ' All your coding needs. ',
 '2016-05-04 15:59:21 ',
 '2016-05-04 15:59:21 ');
+
+INSERT INTO `cldb`.`Posts` (`category`, `title`, `body`, `createdAt`, `updatedAt`) VALUES ('coding', 'best tech 2019', 'what do you think', '2016-05-04 15:59:21', '2016-05-04 15:59:21');
