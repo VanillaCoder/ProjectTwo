@@ -1,3 +1,5 @@
+-- -------------------  4 dif  categories ----------rs
+
 INSERT INTO `cldb`.`Categories`
 (
 `URL`,
@@ -54,6 +56,7 @@ VALUES
 'Good Vibes.',
 '2016-05-04 15:59:21 ',
 '2016-05-04 15:59:21 ');
+
 --------- Post--------
 INSERT INTO `cldb`.`Posts` (`id`, `category`, `title`, `body`, `createdAt`, `updatedAt`) VALUES ('1', 'Music', 'Music Forum', 'What do you think', '2016-05-04 15:59:21', '2016-05-04 15:59:21');
 INSERT INTO `cldb`.`Posts` (`id`, `category`, `title`, `body`, `createdAt`, `updatedAt`) VALUES ('2', 'Gaming', 'Gaming Forum', 'What do you think', '2016-05-04 15:59:21', '2016-05-04 15:59:21');

@@ -2,7 +2,7 @@
   min-height: 800px;
 }
 .container #form {
-  padding: 20px;
+  padding: 10px;
   margin: auto;
   max-width: 40%;
   text-align: center;
@@ -14,9 +14,20 @@
   height: 50px;
   text-align: center;
 }
+.container #form #post-body {
+  border-radius: 10px;
+  height: 80px;
+}
 .container #form #btn-newpost {
+  background: #333;
+  color: #6BFFB8;
+}
+.container #form #btn-newpost:hover {
   background: #1D9568;
   color: #D7EBE1;
+}
+.container #form #btn-newpost:hover + #btn-newpost {
+  animation: anim-shadow 0.5s ease-in-out forwards;
 }
 .container #card {
   background: #D7EBE1;

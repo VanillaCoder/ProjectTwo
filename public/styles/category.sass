@@ -9,7 +9,7 @@ $color3: #1D9568
     
     #form
         
-        padding: 20px
+        padding: 10px
         margin: auto
         max-width: 40%
         text-align: center
@@ -20,11 +20,20 @@ $color3: #1D9568
                 border-radius: 30px
                 height: 50px
                 text-align: center
+        #post-body
+            border-radius: 10px
+            height: 80px
+
 
             
         #btn-newpost
-            background: $color3 
-            color: $colorText
+            background: #333
+            color: $color2
+        #btn-newpost:hover
+            background: $color3
+            color:  $colorText
+        #btn-newpost:hover + #btn-newpost
+            animation: anim-shadow 0.5s ease-in-out forwards
     #card
         background: $colorText
         color: $colorPrimario
