@@ -1,22 +1,22 @@
 <div id="jumbotron" class="jumbotron jumbotron-fluid d-flex text-center ">
   <div class="container  ">
-    <h1 class="display-4 ">CodingLife ;</h1>
-    <p class="lead">“Give a man a program, frustrate him for a day.
+    <h1 class="display-4 ">CodingLife;</h1>
+    <p id="quote" class="lead">“Give a man a program, frustrate him for a day.
 Teach a man to program, frustrate him for a lifetime.” <b id="bold">-Muhammad Waseem</b> </p>
   </div>
 </div>
 
 <div id="container" class="container  ">
   {{#each category}}
-  <a href="/category/{{this.title}}" class="m-4">
+  <a  href="/category/{{this.title}}" class="m-4">
   <div class="card-deck container-card">
     <div class="card main-card  " style="max-width: 40rem;">
       <img class="card-img-top"
         src="{{this.URL}}"
         alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title">{{this.title}}</h5>
-        <p class="card-text">{{this.text}}</p>
+        <h5 id="title" class="card-title">{{this.title}}</h5>
+        <p id="category-text" class="card-text">{{this.text}}</p>
         <p class="card-text"><small class="text-muted">{{this.date}}</small></p>
       </div>
     </div>
