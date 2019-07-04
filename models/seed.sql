@@ -57,12 +57,8 @@ VALUES
 '2016-05-04 15:59:21 ',
 '2016-05-04 15:59:21 ');
 
-
 --------- Post--------
-
 INSERT INTO `cldb`.`Posts` (`id`, `category`, `title`, `body`, `createdAt`, `updatedAt`) VALUES ('1', 'Music', 'Music Forum', 'What do you think', '2016-05-04 15:59:21', '2016-05-04 15:59:21');
 INSERT INTO `cldb`.`Posts` (`id`, `category`, `title`, `body`, `createdAt`, `updatedAt`) VALUES ('2', 'Gaming', 'Gaming Forum', 'What do you think', '2016-05-04 15:59:21', '2016-05-04 15:59:21');
 INSERT INTO `cldb`.`Posts` (`id`, `category`, `title`, `body`, `createdAt`, `updatedAt`) VALUES ('3', 'General', 'Only Good Vibes', 'What do you think', '2016-05-04 15:59:21', '2016-05-04 15:59:21');
 INSERT INTO `cldb`.`Posts` (`id`, `category`, `title`, `body`, `createdAt`, `updatedAt`) VALUES ('4', 'Coding', 'Best Tech 2019', 'What do you think', '2016-05-04 15:59:21', '2016-05-04 15:59:21');
-
-
