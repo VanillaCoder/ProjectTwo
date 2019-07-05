@@ -1,8 +1,11 @@
+* {
+  font-family: "Russo One", sans-serif;
+}
+
 body {
   background: url(https://d3.xlrs.eu/wp-content/uploads/2018/01/black-gradient-background-1024x685.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'Quattrocento Sans', sans-serif;
 }
 
 #navmain {
@@ -19,6 +22,14 @@ body {
 }
 
 ul li i {
+  color: #1D9568;
+  font-family: "Russo One";
+}
+ul li i:hover {
+  color: #6BFFB8;
+}
+
+#CR {
   color: #6BFFB8;
 }
 
