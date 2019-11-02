@@ -24,7 +24,7 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "sass": "^1.22.0",
-    "sequelize": "^5.8.6",
+    "sequelize": "^5.15.1",
     "timeago.js": "^4.0.0-beta.2"
   },
   "devDependencies": {
